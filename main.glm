@@ -15,6 +15,13 @@ schedule setpoint
 object building
 {
     parent load_1;
+    object meter
+    {
+       parent load_1;
+       nominal_voltage 2401.7771;
+       phases ABCN;
+    }
+
     building_type RETAIL;
 
     // inputs
@@ -38,6 +45,12 @@ object building
 object building:..4
 {
     parent load_2;
+    object meter
+    {
+       parent load_2;
+       nominal_voltage 2401.7771;
+       phases BN;
+    }
     floor_area 1500 sf;
     dt 1h;
 
@@ -89,6 +102,12 @@ object building:..4
 object industrial
 {
     parent load_4;
+    object meter
+    {
+       parent load_4;
+       nominal_voltage 2401.7771;
+       phases CN;
+    }
     industry_code "MECS_313";
     P0 1 MW;
     schedule "1-12,0-4,12-23,1,0.5,0.5,0.5,0.5,0.5,0.5,0.99";
@@ -100,6 +119,12 @@ object industrial
 object agricultural
 {
     parent load_5;
+    object meter
+    {
+       parent load_5;
+       nominal_voltage 2401.7771;
+       phases CN;
+    }
     P0 1 MW;
     Mc 1 pu;
     schedule "1-12,0-6,0-11,0.5,0.95";
@@ -114,6 +139,12 @@ object agricultural
 object public_service
 {
     parent load_6;
+    object meter
+    {
+       parent load_6;
+       nominal_voltage 2401.7771;
+       phases CN;
+    }
     P0 100 kW;
     Pi 1 pu;
     schedule "1-12,0-6,0-11,0.5,0.95";
